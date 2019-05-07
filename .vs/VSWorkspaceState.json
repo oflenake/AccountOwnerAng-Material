@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\material",
+    "\\src\\app\\owner",
+    "\\src\\app\\owner\\owner-list",
+    "\\src\\app\\owner\\owner-routing",
+    "\\src\\app\\routing",
+    "\\src\\app\\shared",
+    "\\src\\app\\_interface",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\owner\\owner-list\\owner-list.component.html",
+  "PreviewInSolutionExplorer": false
+}

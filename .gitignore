@@ -32,6 +32,7 @@ speed-measure-plugin.json
 # IDE - VS2017
 .vs/slnx.sqlite
 .vs/slnx.sqlite-journal
+AccountOwnerAng-Material-Notes.txt
 
 # misc
 /.sass-cache
