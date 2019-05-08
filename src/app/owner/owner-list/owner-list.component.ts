@@ -25,7 +25,7 @@ export class OwnerListComponent implements OnInit, AfterViewInit  {
 
   // Initialize
   ngOnInit() {
-    this.getAllOwners();
+    this.getAllOwnersApi();
   }
 
   // ngAfterViewInit function
@@ -37,8 +37,8 @@ export class OwnerListComponent implements OnInit, AfterViewInit  {
   // GET API - Main Owner App Route: api/owner
   // GET API - Child Owner App Route: api/owner/owners
   // getAllOwnersApi function
-  public getAllOwners = () => {
-    this.repoService.getData('api/owner')
+  public getAllOwnersApi = () => {
+    this.repoService.getRepoApi('api/owner')
       .subscribe(res => {
         this.dataSource.data = res as Owner[];
       },
@@ -49,18 +49,20 @@ export class OwnerListComponent implements OnInit, AfterViewInit  {
 
   // redirectToDetails function
   public redirectToDetails = (id: string) => {
-    let url: string = `/owner/details/${id}`;
-    this.router.navigate([url]);
+    let byIDOwnerUrl: string = `/owner/details/${id}`;
+    this.router.navigate([byIDOwnerUrl]);
   }
 
   // redirectToUpdate function
   public redirectToUpdate = (id: string) => {
-
+    let byIDOwnerUrl: string = `/owner/update/${id}`;
+    this.router.navigate([byIDOwnerUrl]);
   }
 
   // redirectToDelete function
   public redirectToDelete = (id: string) => {
-
+    let byIDOwnerUrl: string = `/owner/delete/${id}`;
+    this.router.navigate([byIDOwnerUrl]);
   }
 
   // doFilter custom filtering implementation function

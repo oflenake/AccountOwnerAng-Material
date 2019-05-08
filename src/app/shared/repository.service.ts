@@ -11,26 +11,26 @@ export class RepositoryService {
   constructor(private http: HttpClient) { }
 
   // GET API: api/[route]
-  // getAllRepo function
-  public getData = (route: string) => {
+  // getRepoApi function
+  public getRepoApi = (route: string) => {
     return this.http.get(this.createCompleteRoute(route, environment.urlAddress));
   }
 
   // POST API: api/[route]
-  // postCreateRepo function
-  public create = (route: string, body) => {
+  // createRepoApi function
+  public createRepoApi = (route: string, body) => {
     return this.http.post(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders());
   }
 
   // PUT API: api/[route]
-  // putUpdateRepo function
-  public update = (route: string, body) => {
+  // updateRepoApi function
+  public updateRepoApi = (route: string, body) => {
     return this.http.put(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders());
   }
 
   // DELETE API: api/[route]
-  // delDeleteRepo function
-  public delete = (route: string) => {
+  // deleteRepoApi function
+  public deleteRepoApi = (route: string) => {
     return this.http.delete(this.createCompleteRoute(route, environment.urlAddress));
   }
 

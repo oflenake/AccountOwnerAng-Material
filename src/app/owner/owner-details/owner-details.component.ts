@@ -20,17 +20,17 @@ export class OwnerDetailsComponent implements OnInit {
 
   // Initialize
   ngOnInit() {
-    this.getOwnerDetails();
+    this.getByIDOwnerApi();
   }
 
   // GET API - Main Owner App Route: api/owner
   // GET API - Child Owner App Route: api/owner/owners/4/account
   // Private helper getByIDOwnerApi function
-  private getOwnerDetails = () => {
+  private getByIDOwnerApi = () => {
     let id: string = this.activeRoute.snapshot.params['id'];
-    let apiUrl: string = `api/owner/${id}/account`;
+    let byIDOwnerUrl: string = `api/owner/${id}/account`;
 
-    this.repository.getData(apiUrl)
+    this.repository.getRepoApi(byIDOwnerUrl)
       .subscribe(res => {
         this.owner = res as Owner;
       },

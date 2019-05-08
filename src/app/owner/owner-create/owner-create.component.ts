@@ -31,7 +31,7 @@ export class OwnerCreateComponent implements OnInit {
       address: new FormControl('', [Validators.required, Validators.maxLength(100)])
     });
 
-    // Success dialogConfig to be used as a template reference for the dialog’s open() function
+    // Success and Error dialogConfig for the opened dialog function
     this.dialogConfig = {
       height: '200px',
       width: '400px',
@@ -51,13 +51,13 @@ export class OwnerCreateComponent implements OnInit {
   }
 
   // Public createOwner using ownerFormValue, If ownerForm is valid function
-  public createOwner = (ownerFormValue) => {
+  public createOwnerApi = (ownerFormValue) => {
     if (this.ownerForm.valid) {
       this.executeOwnerCreation(ownerFormValue);
     }
   }
 
-  // Private helper executeOwnerCreation using ownerFormValue object, passed from the ownerForm group function
+  // Private helper executeOwnerCreation function using ownerFormValue object, passed from the ownerForm group
   private executeOwnerCreation = (ownerFormValue) => {
     let owner: OwnerForCreation = {
       name: ownerFormValue.name,
@@ -65,8 +65,8 @@ export class OwnerCreateComponent implements OnInit {
       address: ownerFormValue.address
     }
 
-    let apiUrl = 'api/owner';
-    this.repository.create(apiUrl, owner)
+    let apiOwnerUrl = 'api/owner';
+    this.repository.createRepoApi(apiOwnerUrl, owner)
       .subscribe(res => {
         let dialogRef = this.dialog.open(SuccessDialogComponent, this.dialogConfig); // SuccessDialogComponent's template reference
 

@@ -9,6 +9,8 @@ import { OwnerDetailsComponent } from './owner-details/owner-details.component';
 import { OwnerDataComponent } from './owner-details/owner-data/owner-data.component';
 import { AccountDataComponent } from './owner-details/account-data/account-data.component';
 import { OwnerCreateComponent } from './owner-create/owner-create.component';
+import { OwnerUpdateComponent } from './owner-update/owner-update.component';
+import { OwnerDeleteComponent } from './owner-delete/owner-delete.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { OwnerCreateComponent } from './owner-create/owner-create.component';
     OwnerDetailsComponent,
     OwnerDataComponent,
     AccountDataComponent,
-    OwnerCreateComponent
+    OwnerCreateComponent,
+    OwnerUpdateComponent,
+    OwnerDeleteComponent
   ],
   imports: [
     CommonModule,
