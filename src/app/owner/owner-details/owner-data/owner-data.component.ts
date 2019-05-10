@@ -9,8 +9,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class OwnerDataComponent implements OnInit {
   // Properties
   @Input() public owner: Owner;
-  public selectOptions = [{ name: 'Show', value: 'show' }, { name: `Don't Show`, value: '' }];
   @Output() selectEmitt = new EventEmitter();
+  public selectOptions = [{ name: 'Show', value: 'show' }, { name: `Don't Show`, value: '' }];
 
   // Constructor
   constructor() { }
