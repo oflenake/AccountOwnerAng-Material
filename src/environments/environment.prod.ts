@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  urlAddress: 'https://www.account-owner-ang-material.visiondream.local'
+  urlAddress: 'http://accowner-ang-mat.visiondream.local'
 };
